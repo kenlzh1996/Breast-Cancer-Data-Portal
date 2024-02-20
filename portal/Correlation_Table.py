@@ -47,7 +47,7 @@ def Get_Protein_Correlation_Table(gene_name):
 
             # select first 1000 genes and annotate them
             jo_pro_DF.reset_index(inplace=True)
-            jo_Correlation_table_df = jo_pro_DF.iloc[1:1001]
+            jo_Correlation_table_df = jo_pro_DF.iloc[0:1000]
             jo_Correlation_table_df = jo_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
@@ -91,7 +91,7 @@ def Get_Protein_Correlation_Table(gene_name):
             kr_pro_DF.sort_values(by='p', inplace=True, ascending=True)
             # select first 1000 genes and annotate them
             kr_pro_DF.reset_index(inplace=True)
-            kr_Correlation_table_df = kr_pro_DF.iloc[1:1001]
+            kr_Correlation_table_df = kr_pro_DF.iloc[0:1000]
             kr_Correlation_table_df = kr_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
@@ -136,7 +136,7 @@ def Get_Protein_Correlation_Table(gene_name):
 
             # select first 1000 genes and annotate them
             me_pro_DF.reset_index(inplace=True)
-            me_Correlation_table_df = me_pro_DF.iloc[1:1001]
+            me_Correlation_table_df = me_pro_DF.iloc[0:1000]
             me_Correlation_table_df = me_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
@@ -221,7 +221,7 @@ def Get_mRNA_Correlation_Table(gene_name):
 
             # select first 1000 genes and annotate them
             jo_mRNA_DF.reset_index(inplace=True)
-            jo_m_Correlation_table_df = jo_mRNA_DF.iloc[1:1001]
+            jo_m_Correlation_table_df = jo_mRNA_DF.iloc[0:1000]
             jo_m_Correlation_table_df = jo_m_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
@@ -266,7 +266,7 @@ def Get_mRNA_Correlation_Table(gene_name):
 
             # select first 1000 genes and annotate them
             kr_mRNA_DF.reset_index(inplace=True)
-            kr_m_Correlation_table_df = kr_mRNA_DF.iloc[1:1001]
+            kr_m_Correlation_table_df = kr_mRNA_DF.iloc[0:1000]
             kr_m_Correlation_table_df = kr_m_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
@@ -311,7 +311,7 @@ def Get_mRNA_Correlation_Table(gene_name):
 
             # select first 1000 genes and annotate them
             me_mRNA_DF.reset_index(inplace=True)
-            me_m_Correlation_table_df = me_mRNA_DF.iloc[1:1001]
+            me_m_Correlation_table_df = me_mRNA_DF.iloc[0:1000]
             me_m_Correlation_table_df = me_m_Correlation_table_df.join(annotate, on='Gene')
 
         except ValueError or KeyError:
